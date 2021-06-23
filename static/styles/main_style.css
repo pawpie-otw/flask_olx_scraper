@@ -1,0 +1,77 @@
+body{
+  background-image: url("../images/grey_background.png");
+}
+
+.styled-table {
+    margin:auto;
+    max-width: 85%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+}
+.styled-table thead tr {
+    background-color: #727272;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: #aaaaaa;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #e0e0e0;
+}
+
+tr:nth-child(even) {
+  background-color: #616161;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+#form-div{
+  border-radius: 5px;
+  margin: 25px auto auto auto;
+  width:70%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+input{
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px auto 10px auto;
+}
+
+#input-text{
+  width:70%;
+  margin-left: 10%;
+}
+
+#input-number{
+  width:70px;
+  float: right;
+  margin-right: 10%;
+}
+
+#input-submit{
+  width:50%;
+  margin-bottom: 10px;
+}
+
+.my-alert{
+  margin: 50px auto auto auto;
+  width:50%;
+  text-align:center;
+}
