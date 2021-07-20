@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect
-from OLXScraper import olx_scrapper
+from OLXScraper import olx_scraper
 
 
 app = Flask(__name__)
@@ -26,7 +26,7 @@ def result(nop: int, url: str):
         url_ = url
         nop_ = nop
     try:
-        df = olx_scrapper(url_, nr_of_page=nop_, url_to_hyperlink=True)
+        df = olx_scraper(url_, nr_of_page=nop_, url_to_hyperlink=True)
         return render_template('result.html', table=df.to_html(
             header="true", classes='styled-table', escape=False), nop=nop_, url_=url,)
     except Exception:
