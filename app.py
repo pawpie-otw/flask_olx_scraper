@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect
-from OLXScrapper import olx_scrapper
+from OLXScraper import olx_scrapper
 
 
 app = Flask(__name__)
