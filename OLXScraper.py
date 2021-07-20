@@ -51,18 +51,18 @@ def olx_scraper(url: str, nr_of_page: int = 5, url_to_hyperlink=False) -> pd.Dat
             footer = offer.find('td', class_="bottom-cell")
             city.append(footer.find_all('small')[0].get_text().strip())
             date.append(footer.find_all('small')[1].get_text().strip())
-    bionicleData = pd.DataFrame({"title": title, "price": price,
+    df = pd.DataFrame({"title": title, "price": price,
                                  "city": city, "date": date, "link": link})
-    if len(bionicleData.index) == 0:
+    if len(df.index) == 0:
         return r'''< div class="w3-panel w3-red" >
                                <h3>Uwaga< /h3 >
                                <p> Podany link jest nieprawidłowy lub nie da się go zescrapować (np zła kategoria: np. praca). < /p >
                                </div>'''
     if url_to_hyperlink:
-        bionicleData.link = pd.Series(
+        df.link = pd.Series(
             [f"<a href='{x}'>{x}</a>"
-             for x in bionicleData.link])
-    return bionicleData
+             for x in df.link])
+    return df
 
 
 if __name__ == '__main__':
