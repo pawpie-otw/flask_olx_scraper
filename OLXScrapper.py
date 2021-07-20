@@ -20,7 +20,7 @@ def parse_price(olx_price: str) -> float:
                  replace('zł', '').replace(' ', ''))
 
 
-def olx_scrapper(url: str, nr_of_page: int = 5, url_to_hyperlink=False) -> pd.DataFrame:
+def olx_scraper(url: str, nr_of_page: int = 5, url_to_hyperlink=False) -> pd.DataFrame:
     olx_request = requests.get(url)
     title, price, city, date, link = [], [], [], [], []
     if '?' in url:
